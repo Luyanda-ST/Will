@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Your Fees | Next Level Gaming &amp; Esports Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="fees">
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Next Level Gaming &amp; Esports logo">
+            <strong>NEXT LEVEL</strong><br>
+            GAMING &amp; ESPORTS
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="packages.html">Packages</a>
+            <a href="fees.html" class="active">Fees</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="fees.html">Get started →</a>
+    </header>
+
+    <main>
+        <!-- Intro -->
+        <section>
+            <p>Plan your session</p>
+            <h1>Calculate your <em>Fees.</em></h1>
+            <p>Build your experience and get an instant, transparent estimate before you book.</p>
+        </section>
+
+        <!-- Quote form and live quotation -->
+        <section>
+            <form id="quote-form" action="#" method="post">
+                <!-- Step 1: details -->
+                <h2><span>01</span> Your details</h2>
+                <p>We'll use these details to follow up on your quote.</p>
+
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Lerato Mokoena" required>
+
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+27 82 000 0000" pattern="[0-9+()\s-]{7,20}" title="Enter a phone number using digits, spaces, +, parentheses or hyphens." required>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <!-- Step 2: experiences -->
+                <h2><span>02</span> Choose your experiences</h2>
+                <p>Book more together to unlock an automatic discount.</p>
+
+                <!-- Ultimate Gamer Pass -->
+                <div>
+                    <input type="checkbox" id="ultimate-gamer-pass" name="experience" value="ultimate-gamer-pass">
+                    <label for="ultimate-gamer-pass">Ultimate Gamer Pass</label>
+                    <p>Package</p>
+                    <p>R1,500</p>
+                </div>
+
+                <!-- VIP Gaming Experience -->
+                <div>
+                    <input type="checkbox" id="vip-gaming-experience" name="experience" value="vip-gaming-experience">
+                    <label for="vip-gaming-experience">VIP Gaming Experience</label>
+                    <p>Package</p>
+                    <p>R1,500</p>
+                </div>
+
+                <!-- Esports Training Package -->
+                <div>
+                    <input type="checkbox" id="esports-training-package" name="experience" value="esports-training-package">
+                    <label for="esports-training-package">Esports Training Package</label>
+                    <p>Package</p>
+                    <p>R1,500</p>
+                </div>
+
+                <!-- Birthday Party Package -->
+                <div>
+                    <input type="checkbox" id="birthday-party-package" name="experience" value="birthday-party-package">
+                    <label for="birthday-party-package">Birthday Party Package</label>
+                    <p>Package</p>
+                    <p>R1,500</p>
+                </div>
+
+                <!-- Virtual Reality Experience -->
+                <div>
+                    <input type="checkbox" id="virtual-reality-experience" name="experience" value="virtual-reality-experience">
+                    <label for="virtual-reality-experience">Virtual Reality Experience</label>
+                    <p>Individual Experience</p>
+                    <p>R750</p>
+                </div>
+
+                <!-- Racing Simulator Challenge -->
+                <div>
+                    <input type="checkbox" id="racing-simulator-challenge" name="experience" value="racing-simulator-challenge">
+                    <label for="racing-simulator-challenge">Racing Simulator Challenge</label>
+                    <p>Individual Experience</p>
+                    <p>R750</p>
+                </div>
+
+                <!-- Escape Room Challenge -->
+                <div>
+                    <input type="checkbox" id="escape-room-challenge" name="experience" value="escape-room-challenge">
+                    <label for="escape-room-challenge">Escape Room Challenge</label>
+                    <p>Individual Experience</p>
+                    <p>R750</p>
+                </div>
+
+                <button type="button" id="calculate-quote">Calculate total</button>
+                <button type="submit">Request this quote →</button>
+            </form>
+
+            <!-- Live quotation, updated as experiences are selected. -->
+            <aside>
+                <p>Live estimate</p>
+                <h2>Your quotation</h2>
+                <p>Estimate only · Not a formal invoice</p>
+
+                <table>
+                    <tr>
+                        <td>Selected bookings</td>
+                        <td id="booking-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="quote-subtotal">R0</td>
+                    </tr>
+                    <tr>
+                        <td id="quote-discount-label">Discount (0%)</td>
+                        <td id="quote-discount">– R0</td>
+                    </tr>
+                    <tr>
+                        <td>VAT (15%)</td>
+                        <td id="quote-vat">R0</td>
+                    </tr>
+                </table>
+
+                <p>Estimated total</p>
+                <p><strong id="quote-total">R0</strong></p>
+                <p>VAT included</p>
+                <p id="quote-feedback" role="status" aria-live="polite"></p>
+
+                <div class="savings">
+                <h3>Multi-booking savings</h3>
+                <table>
+                    <tr>
+                        <td>2 bookings</td>
+                        <td>5% off</td>
+                    </tr>
+                    <tr>
+                        <td>3 bookings</td>
+                        <td>10% off</td>
+                    </tr>
+                    <tr>
+                        <td>4+ bookings</td>
+                        <td>15% off</td>
+                    </tr>
+                </table>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Next Level Gaming &amp; Esports logo">
+                <strong>NEXT LEVEL</strong><br>
+                GAMING &amp; ESPORTS
+            </a>
+            <p>Johannesburg's home for premium gaming, real competition and unforgettable shared experiences.</p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="about.html">About the arena</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="fees.html">Get a quote</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Find us</h4>
+            <ul>
+                <li>44 Stanley Avenue, Milpark, Johannesburg</li>
+                <li><a href="tel:+27115550199">+27 11 555 0199</a></li>
+                <li><a href="mailto:play@nextlevelgaming.co.za">play@nextlevelgaming.co.za</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Open 7 days</h4>
+            <ul>
+                <li><strong>Mon–Thu</strong> <span>10:00–22:00</span></li>
+                <li><strong>Fri–Sun</strong> <span>09:00–00:00</span></li>
+            </ul>
+        </div>
+
+        <div>
+            <p>&copy; 2026 Next Level Gaming &amp; Esports Arena</p>
+            <p>Play hard. Play fair. Level up.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages | Next Level Gaming &amp; Esports Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="packages">
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Next Level Gaming &amp; Esports logo">
+            <strong>NEXT LEVEL</strong><br>
+            GAMING &amp; ESPORTS
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="packages.html" class="active">Packages</a>
+            <a href="fees.html">Fees</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="fees.html">Get started →</a>
+    </header>
+
+    <main>
+        <!-- Intro and filter -->
+        <section>
+            <p>Choose your challenge</p>
+            <h1>Packages &amp; <em>Experiences.</em></h1>
+            <p>From all-day access to focused adventures, there's a next level experience for every player.</p>
+
+            <label for="category">Filter by category</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="package">Package</option>
+                <option value="individual-experience">Individual Experience</option>
+            </select>
+        </section>
+
+        <!-- Price table -->
+        <section>
+            <div class="table-card">
+            <table id="package-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Fee</th>
+                        <th>Description</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-category="package">
+                        <td>Ultimate Gamer Pass</td>
+                        <td><span class="pill">Package</span></td>
+                        <td>R1,500</td>
+                        <td>Unlimited access to every arena for a full day.</td>
+                        <td><a href="ultimate-gamer-pass.html">View details →</a></td>
+                    </tr>
+                    <tr data-category="package">
+                        <td>VIP Gaming Experience</td>
+                        <td><span class="pill">Package</span></td>
+                        <td>R1,500</td>
+                        <td>Premium, private play with five-star service.</td>
+                        <td><a href="vip-gaming-experience.html">View details →</a></td>
+                    </tr>
+                    <tr data-category="package">
+                        <td>Esports Training Package</td>
+                        <td><span class="pill">Package</span></td>
+                        <td>R1,500</td>
+                        <td>Structured coaching to sharpen competitive performance.</td>
+                        <td><a href="esports-training-package.html">View details →</a></td>
+                    </tr>
+                    <tr data-category="package">
+                        <td>Birthday Party Package</td>
+                        <td><span class="pill">Package</span></td>
+                        <td>R1,500</td>
+                        <td>A complete, high-energy gaming celebration.</td>
+                        <td><a href="birthday-party-package.html">View details →</a></td>
+                    </tr>
+                    <tr data-category="individual-experience">
+                        <td>Virtual Reality Experience</td>
+                        <td><span class="pill">Individual Experience</span></td>
+                        <td>R750</td>
+                        <td>Step into another world with supported VR play.</td>
+                        <td><a href="virtual-reality-experience.html">View details →</a></td>
+                    </tr>
+                    <tr data-category="individual-experience">
+                        <td>Racing Simulator Challenge</td>
+                        <td><span class="pill">Individual Experience</span></td>
+                        <td>R750</td>
+                        <td>Race iconic tracks and climb the live leaderboard.</td>
+                        <td><a href="racing-simulator-challenge.html">View details →</a></td>
+                    </tr>
+                    <tr data-category="individual-experience">
+                        <td>Escape Room Challenge</td>
+                        <td><span class="pill">Individual Experience</span></td>
+                        <td>R750</td>
+                        <td>Solve, collaborate and beat the clock as a team.</td>
+                        <td><a href="escape-room-challenge.html">View details →</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>All prices include equipment access.</p>
+            <a href="fees.html">Calculate a multi-booking quote →</a>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Next Level Gaming &amp; Esports logo">
+                <strong>NEXT LEVEL</strong><br>
+                GAMING &amp; ESPORTS
+            </a>
+            <p>Johannesburg's home for premium gaming, real competition and unforgettable shared experiences.</p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="about.html">About the arena</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="fees.html">Get a quote</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Find us</h4>
+            <ul>
+                <li>44 Stanley Avenue, Milpark, Johannesburg</li>
+                <li><a href="tel:+27115550199">+27 11 555 0199</a></li>
+                <li><a href="mailto:play@nextlevelgaming.co.za">play@nextlevelgaming.co.za</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Open 7 days</h4>
+            <ul>
+                <li><strong>Mon–Thu</strong> <span>10:00–22:00</span></li>
+                <li><strong>Fri–Sun</strong> <span>09:00–00:00</span></li>
+            </ul>
+        </div>
+
+        <div>
+            <p>&copy; 2026 Next Level Gaming &amp; Esports Arena</p>
+            <p>Play hard. Play fair. Level up.</p>
+        </div>
+    </footer>
+</body>
+</html>
