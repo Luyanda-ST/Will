@@ -1,6 +1,6 @@
-# Next Level Gaming & Esports Arena — Website (XHAW5112 Task 2 - Phase 3)
+# Next Level Gaming & Esports Arena — Website (XHAW5112 Task 3 - Phase 1)
 
-A dark-themed, responsive multi-page web application developed for **Next Level Gaming & Esports Arena**, an SME entertainment venue located in Milpark, Johannesburg[cite: 12]. Built using **HTML**, **CSS**, and browser-based **JavaScript** as Phase 3 of the **XHAW5112 Work-Integrated Learning (Task 2)** curriculum[cite: 11, 12].
+A dark-themed, responsive multi-page web application developed for **Next Level Gaming & Esports Arena**, an SME entertainment venue located in Milpark, Johannesburg[cite: 12]. Built using **HTML**, **CSS**, and browser-based **JavaScript** for **Task 3, Phase 1** of the **XHAW5112 Work-Integrated Learning** project[cite: 11, 12].
 
 ---
 
@@ -8,11 +8,11 @@ A dark-themed, responsive multi-page web application developed for **Next Level 
 
 The platform acts as a digital front for **Next Level Gaming & Esports Arena**[cite: 12]. It provides visitors, competitive players, schools, and corporate groups with an interactive environment to discover, estimate, and inquire about gaming experiences[cite: 12]. Key functional capabilities include:
 
-1. **Interactive Fee & Quotation Estimator (`Website/fees.html`):** Updates the estimate as users select experiences, applies multi-booking discounts (5% to 15%) and 15% VAT, then prepares an email request in the visitor’s email app.
+1. **Interactive Fee & Quotation Estimator (`Website/fees.html`):** Validates customer details, displays selected experiences and their prices, applies the required discounts and 15% VAT, and prepares the estimate request in the visitor’s email app. The estimate is not a formal invoice.
 2. **Package & Experience Directory (`Website/packages.html`):** Presents the available gaming offerings in a table with working category filters.
-3. **Venue & Background Information (`about.html`):** Outlines the SME’s backstory (founded in 2023 by Jason Naidoo), operational vision, core mission, and organizational goals[cite: 12].
-4. **Enquiries & Location Mapping (`Website/contact.html`):** Includes a contact form that prepares an email, an embedded map, address details, and contact information. Form delivery uses the visitor’s configured email app.
-5. **Detailed Package Breakdown (`Website/ultimate-gamer-pass.html`):** Dedicated page highlighting specific package inclusions, pricing, and perks[cite: 12].
+3. **Venue & Background Information (`Website/about.html`):** Outlines the SME’s backstory (founded in 2023 by Jason Naidoo), operational vision, core mission, and organizational goals[cite: 12].
+4. **Enquiries & Location Mapping (`Website/contact.html`):** Includes a contact form, embedded map, venue address, phone and email details. Form delivery uses the visitor’s configured email app. Social platform links are present; replace them with the arena’s official profile URLs before publishing.
+5. **Detailed Package Pages (`Website/`):** Each of the seven packages and individual experiences has its own overview, fee and included features.
 
 ---
 

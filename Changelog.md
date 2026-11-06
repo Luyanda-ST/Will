@@ -41,11 +41,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   any updates to code please log here so before we comit on github we know who did what last then we can continue 
   
 
-## [1.3.0] - 2026-11-05
+## [1.3.0] - 2026-11-06
 
 ### Added
 - Added detail pages for each gaming package and individual experience.
-- Added a calculate button, URL preselection from detail pages, and contact social link slots.
+- Added a calculate button, URL preselection from detail pages, itemised quote summary, and contact social link slots.
 
 ### Fixed
 - Connected each summary listing to its matching detail page and linked between detail pages.

@@ -544,12 +544,16 @@ label { color: var(--muted); font-size: 11px; font-weight: 600; }
 .fees aside td:last-child { color: var(--text); font-weight: 700; text-align: right; }
 .fees aside > table:first-of-type { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 8px 0; }
 .fees aside > table:first-of-type tr:nth-child(3) td:last-child { color: var(--green); }
-.fees aside > p:nth-of-type(3) { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
-.fees aside > p:nth-of-type(4) strong {
+.fees aside > #quote-total-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+.fees aside > .quote-total-value { margin-top: 4px; }
+.fees aside > .quote-total-value strong {
     color: var(--green);
     font: 800 48px/1.1 "Montserrat", sans-serif;
 }
-.fees aside > p:nth-of-type(5) { font-size: 10.5px; }
+.fees aside > .quote-items-label { margin-top: 18px; font-size: 11px; }
+.fees aside > #quote-items { margin-top: 4px; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.fees aside > .vat-note { font-size: 10.5px; }
+.fees aside > #quote-feedback { margin-top: 8px; font-size: 11px; }
 
 .savings { margin-top: 20px; padding: 16px 18px; border-radius: 10px; background: var(--field); }
 .savings h3 { font-size: 11px; text-transform: none; font-family: "Inter", sans-serif; font-weight: 700; }

@@ -51,6 +51,7 @@ if (quoteForm) {
     const discountOutput = document.getElementById("quote-discount");
     const vatOutput = document.getElementById("quote-vat");
     const totalOutput = document.getElementById("quote-total");
+    const quoteItemsOutput = document.getElementById("quote-items");
     const quoteFeedback = document.getElementById("quote-feedback");
 
     function updateQuote(showCalculatedMessage) {
@@ -76,6 +77,12 @@ if (quoteForm) {
         const vat = discountedSubtotal * 0.15;
         const total = discountedSubtotal + vat;
 
+        const selectedLines = selectedBookings.map(function (option) {
+            const label = quoteForm.querySelector('label[for="' + option.id + '"]').textContent.trim();
+            return label + " — " + formatRand(experiencePrices[option.value] || 0);
+        });
+
+        quoteItemsOutput.textContent = selectedLines.length ? selectedLines.join("; ") : "No experiences selected.";
         bookingCount.textContent = selectedCount;
         subtotalOutput.textContent = formatRand(subtotal);
         discountLabel.textContent = "Discount (" + Math.round(discountRate * 100) + "%)";
@@ -123,16 +130,22 @@ if (quoteForm) {
             return;
         }
 
-        const selectedNames = selectedOptions.map(function (option) {
-            return quoteForm.querySelector('label[for="' + option.id + '"]').textContent.trim();
+        const selectedLines = selectedOptions.map(function (option) {
+            const label = quoteForm.querySelector('label[for="' + option.id + '"]').textContent.trim();
+            return label + " — " + formatRand(experiencePrices[option.value] || 0);
         });
         const subject = "Gaming arena quote request";
         const body = [
             "Name: " + document.getElementById("name").value.trim(),
             "Phone: " + document.getElementById("phone").value.trim(),
             "Email: " + document.getElementById("email").value.trim(),
-            "Selected experiences: " + selectedNames.join(", "),
-            "Estimated total: " + totalOutput.textContent
+            "Selected experiences:",
+            selectedLines.join("\n"),
+            "Subtotal: " + subtotalOutput.textContent,
+            discountLabel.textContent + ": " + discountOutput.textContent,
+            "VAT (15%): " + vatOutput.textContent,
+            "Estimated total: " + totalOutput.textContent,
+            "Estimate only; not a formal invoice."
         ].join("\n");
 
         quoteFeedback.textContent = "Your email app will open with the quote request ready to send.";
